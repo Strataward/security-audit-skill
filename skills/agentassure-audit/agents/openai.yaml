@@ -1,0 +1,4 @@
+interface:
+  display_name: "AgentAssure Audit"
+  short_description: "Audit code, check CVEs, and map verified evidence"
+  default_prompt: "Use $agentassure-audit to audit this repository, check current advisories, and create a visual report with prevention steps."

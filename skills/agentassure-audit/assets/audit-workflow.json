@@ -1,0 +1,158 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "AgentAssure Audit",
+    "quality_profile": "showcase",
+    "locale": "en",
+    "animation": "none"
+  },
+  "lanes": [
+    {
+      "id": "analysis",
+      "label": "Audit evidence"
+    },
+    {
+      "id": "checks",
+      "label": "Independent checks"
+    },
+    {
+      "id": "delivery",
+      "label": "Report and prevention"
+    }
+  ],
+  "mainPath": [
+    "scope",
+    "inventory",
+    "hunt",
+    "verify",
+    "report",
+    "prevent"
+  ],
+  "nodes": [
+    {
+      "id": "scope",
+      "lane": "analysis",
+      "col": 0,
+      "type": "security",
+      "label": "Set scope",
+      "sublabel": "Pin revision"
+    },
+    {
+      "id": "inventory",
+      "lane": "analysis",
+      "col": 1,
+      "type": "backend",
+      "label": "Map boundaries",
+      "sublabel": "Read code and versions",
+      "width": 160
+    },
+    {
+      "id": "hunt",
+      "lane": "analysis",
+      "col": 2,
+      "type": "backend",
+      "label": "Find candidates",
+      "sublabel": "Assign bounded checks",
+      "width": 160
+    },
+    {
+      "id": "verify",
+      "lane": "checks",
+      "col": 2,
+      "type": "security",
+      "label": "Try to disprove",
+      "sublabel": "Use a separate agent",
+      "width": 160
+    },
+    {
+      "id": "cve",
+      "lane": "checks",
+      "col": 1,
+      "type": "external",
+      "label": "Check advisories",
+      "sublabel": "OSV, vendor, CISA KEV",
+      "width": 160
+    },
+    {
+      "id": "report",
+      "lane": "delivery",
+      "col": 2,
+      "type": "frontend",
+      "label": "Explain evidence",
+      "sublabel": "Report and visual map",
+      "width": 160
+    },
+    {
+      "id": "prevent",
+      "lane": "delivery",
+      "col": 3,
+      "type": "security",
+      "label": "Prevent recurrence",
+      "sublabel": "Controls and retest plan",
+      "width": 160
+    }
+  ],
+  "edges": [
+    {
+      "id": "scope-inventory",
+      "from": "scope",
+      "to": "inventory",
+      "label": "Scoped source"
+    },
+    {
+      "id": "inventory-hunt",
+      "from": "inventory",
+      "to": "hunt",
+      "label": "Evidence"
+    },
+    {
+      "id": "inventory-cve",
+      "from": "inventory",
+      "to": "cve",
+      "label": "Public versions"
+    },
+    {
+      "id": "hunt-verify",
+      "from": "hunt",
+      "to": "verify",
+      "label": "Candidate"
+    },
+    {
+      "id": "cve-verify",
+      "from": "cve",
+      "to": "verify",
+      "label": "Advisory match"
+    },
+    {
+      "id": "verify-report",
+      "from": "verify",
+      "to": "report",
+      "label": "Verdict and gaps"
+    },
+    {
+      "id": "report-prevent",
+      "from": "report",
+      "to": "prevent",
+      "label": "Root cause"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Evidence before conclusions",
+      "items": [
+        "Save records after each phase.",
+        "A version match does not prove exploitation."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Execution and scope",
+      "items": [
+        "Run target code only in a verified sandbox.",
+        "This diagram describes the skill. It is not an audit result."
+      ]
+    }
+  ]
+}
