@@ -9,6 +9,12 @@ Connect each security claim to current evidence. Separate a package advisory mat
 
 This skill follows Cloudflare's audit pattern. It adds current advisory checks, visual evidence maps, and prevention plans. It is a skill with saved audit records. It is not a sandbox, a continuous monitor, or a durable workflow service.
 
+## Agent compatibility
+
+Use this skill in Codex, Claude Code, Cursor, or another host that loads Agent Skills. Resolve paths from the installed skill directory. Codex UI metadata in `agents/openai.yaml` is optional for other hosts.
+
+Map coordinator, hunter, and verifier roles to the host's available tools. A role name does not create an independent agent. If delegation, web access, Python, Archify, or sandbox controls are unavailable, report the missing capability. Continue only the stages that the host can perform. Do not claim complete verification from installation alone.
+
 ## Choose the scope
 
 - For a full repository audit, use all stages below.

@@ -26,39 +26,66 @@ flowchart LR
   F --> G[Visual map and prevention]
 ```
 
-## Install in Codex
+## Install for your agent
 
-Clone this repository:
-
-```bash
-git clone https://github.com/Strataward/security-audit-skill.git
-cd security-audit-skill
-```
-
-Copy the skill into your Codex skills directory. This command refuses to replace an existing skill:
+Use the [Skills CLI](https://github.com/vercel-labs/skills). It requires Node.js 22.20 or later. Run this command from your project and select your agents:
 
 ```bash
-python3 - <<'PY'
-import os
-from pathlib import Path
-import shutil
-codex_dir = Path(os.environ.get('CODEX_HOME', Path.home() / '.codex'))
-destination = codex_dir / 'skills' / 'agentassure-audit'
-destination.parent.mkdir(parents=True, exist_ok=True)
-shutil.copytree('skills/agentassure-audit', destination)
-print(destination)
-PY
+npx skills add Strataward/security-audit-skill --skill agentassure-audit
 ```
 
-Use the skill in a project chat:
+Select Codex, Claude Code, and Cursor directly:
+
+```bash
+npx skills add Strataward/security-audit-skill --skill agentassure-audit -a codex -a claude-code -a cursor
+```
+
+Install for all agents supported by the CLI:
+
+```bash
+npx skills add Strataward/security-audit-skill --skill agentassure-audit --agent '*'
+```
+
+Add `-g` to any install command for use across projects. Omit it for a project install. Keep the wildcard quoted. Use `--copy` if your environment does not support symlinks.
+
+Inspect available skills before installation:
+
+```bash
+npx skills add Strataward/security-audit-skill --list
+```
+
+Check and update an installed copy:
+
+```bash
+npx skills check
+npx skills update agentassure-audit
+```
+
+See the [supported agent list](https://github.com/vercel-labs/skills/blob/main/docs/agents.md) for current targets. “All agents” means the agents supported by that installer. It does not mean that every host provides the same tools or execution controls.
+
+## Use the skill
+
+In Codex, use `$agentassure-audit`. In Claude Code or Cursor, select the installed skill through the host's skill interface, or ask:
 
 ```text
-Use $agentassure-audit to audit this repository.
+Use the agentassure-audit skill to audit this repository.
 Check current CVEs.
 Create a visual report and prevention plan.
 ```
 
-For another coding agent, load [SKILL.md](skills/agentassure-audit/SKILL.md) through its supported skill mechanism. Agent names and delegation tools can differ. Keep discovery and verification separate. If independent verification is unavailable, the result stays unconfirmed.
+The portable entry point is [SKILL.md](skills/agentassure-audit/SKILL.md). The `agents/openai.yaml` file supplies optional Codex UI metadata. Other agents can use the same instructions and Python helpers without that metadata.
+
+For a host without installer support, copy the complete `skills/agentassure-audit` folder into its documented skills directory. Keep its references, scripts, and assets together. Do not replace an existing installation without reviewing the changes.
+
+| Host capability | Behavior when unavailable |
+|---|---|
+| Independent subagents | Keep findings unconfirmed. A second pass by the same agent is not independent verification. |
+| Live web access | Record current advisory checks as incomplete. |
+| Python execution | Use source review and report that helper validation did not run. |
+| Verified OS sandbox | Do not execute target code. Continue with static evidence. |
+| Archify and its runtime | Produce the written report and a diagram draft. Mark HTML delivery incomplete. |
+
+Installation compatibility does not establish audit quality. The helper tests run in CI. Full audit behavior has not been tested in every supported agent.
 
 ## Requirements and limits
 
