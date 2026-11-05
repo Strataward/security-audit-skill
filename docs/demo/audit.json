@@ -1,0 +1,468 @@
+{
+  "schema_version": 1,
+  "run": {
+    "id": "self-audit-2026-11-05",
+    "target": ".",
+    "revision": "c02747805f7dc563e4f534fbb4084c10a8273e29",
+    "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+    "created_at": "2026-11-05T18:35:45.490274+00:00",
+    "status": "partial",
+    "scope_paths": [
+      ".github/workflows/test.yml",
+      ".gitignore",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "README.md",
+      "SECURITY.md",
+      "skills/agentassure-audit/SKILL.md",
+      "skills/agentassure-audit/agents/openai.yaml",
+      "skills/agentassure-audit/assets/audit-workflow.json",
+      "skills/agentassure-audit/references/advisories.md",
+      "skills/agentassure-audit/references/audit.md",
+      "skills/agentassure-audit/references/prevention.md",
+      "skills/agentassure-audit/references/records.md",
+      "skills/agentassure-audit/references/sources.md",
+      "skills/agentassure-audit/references/visualization.md",
+      "skills/agentassure-audit/scripts/advisories.py",
+      "skills/agentassure-audit/scripts/audit_records.py",
+      "skills/agentassure-audit/scripts/test_advisories.py",
+      "skills/agentassure-audit/scripts/test_audit_records.py"
+    ],
+    "gaps": [
+      "No verified OS sandbox was available. Target code did not run.",
+      "Concurrent path race remains unverified.",
+      "Action transitive dependencies and exact runtime versions are not fully inventoried.",
+      "No CVE IDs established for KEV enrichment."
+    ],
+    "execution_policy": "static-only"
+  },
+  "evidence": [
+    {
+      "id": "ev0",
+      "kind": "source",
+      "summary": ".github/workflows/test.yml",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": ".github/workflows/test.yml",
+      "sha256": "eee1a2f34a39da632c0faf89671ee87ce45c31b75d2efc53aced09a1c50734e3"
+    },
+    {
+      "id": "ev1",
+      "kind": "source",
+      "summary": ".gitignore",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": ".gitignore",
+      "sha256": "25b9cb0445c556ad35e92cae5d26dfa31e9b57687a17d4269091861d63c21816"
+    },
+    {
+      "id": "ev2",
+      "kind": "source",
+      "summary": "CONTRIBUTING.md",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": "CONTRIBUTING.md",
+      "sha256": "a7ad9ea44ff5ead99a15f38914def73d61957d4004aa1f23c3c616f633cac722"
+    },
+    {
+      "id": "ev3",
+      "kind": "source",
+      "summary": "LICENSE",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": "LICENSE",
+      "sha256": "0740bf99f174785e028303f9888232449e683927d9dfbdf83c84cf3c1490328c"
+    },
+    {
+      "id": "ev4",
+      "kind": "source",
+      "summary": "README.md",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": "README.md",
+      "sha256": "d15acc4eedcf7f21ec89eade51453ab9412e521ad8dd1106e83334a9c130346a"
+    },
+    {
+      "id": "ev5",
+      "kind": "source",
+      "summary": "SECURITY.md",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": "SECURITY.md",
+      "sha256": "51059b42b8929e143f7bb43f24fc201733df638120aa37f56ed2f447db13fa5a"
+    },
+    {
+      "id": "ev6",
+      "kind": "source",
+      "summary": "skills/agentassure-audit/SKILL.md",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": "skills/agentassure-audit/SKILL.md",
+      "sha256": "452489073369c001db94864d532d2633f80f4a64e3c3e01797fbe6c52dd7a80e"
+    },
+    {
+      "id": "ev7",
+      "kind": "source",
+      "summary": "skills/agentassure-audit/agents/openai.yaml",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": "skills/agentassure-audit/agents/openai.yaml",
+      "sha256": "c0b54cd8e8b6eaf3ba9f009f0432f8621184dc0182d275ce32ae7de206bb4f89"
+    },
+    {
+      "id": "ev8",
+      "kind": "source",
+      "summary": "skills/agentassure-audit/assets/audit-workflow.json",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": "skills/agentassure-audit/assets/audit-workflow.json",
+      "sha256": "e22dba824887230bcfc4ba38ce154baa8dda59b55441ca62fb3ffcc9a6025668"
+    },
+    {
+      "id": "ev9",
+      "kind": "source",
+      "summary": "skills/agentassure-audit/references/advisories.md",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": "skills/agentassure-audit/references/advisories.md",
+      "sha256": "ad239e8d58cb13fc1c2c500da56e8e57da55915a54843136eb537e70f2e3e210"
+    },
+    {
+      "id": "ev10",
+      "kind": "source",
+      "summary": "skills/agentassure-audit/references/audit.md",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": "skills/agentassure-audit/references/audit.md",
+      "sha256": "08f8de8915707ded9487129367d4a0816c87418f2b886d80d649d03ee5c7ded1"
+    },
+    {
+      "id": "ev11",
+      "kind": "source",
+      "summary": "skills/agentassure-audit/references/prevention.md",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": "skills/agentassure-audit/references/prevention.md",
+      "sha256": "80e7b8e84e75cad57cdc542e0afb40b41fd14e6eeaf81a7c2106c036d5521c88"
+    },
+    {
+      "id": "ev12",
+      "kind": "source",
+      "summary": "skills/agentassure-audit/references/records.md",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": "skills/agentassure-audit/references/records.md",
+      "sha256": "1f98dde88ee8108465568aeeda65cb208754e6f96d32edd48d9dbbdcd7d91506"
+    },
+    {
+      "id": "ev13",
+      "kind": "source",
+      "summary": "skills/agentassure-audit/references/sources.md",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": "skills/agentassure-audit/references/sources.md",
+      "sha256": "147c98e56ff4e204920a5c45f24ebecb63b7062a0029526c8b4ddaf58cd3249d"
+    },
+    {
+      "id": "ev14",
+      "kind": "source",
+      "summary": "skills/agentassure-audit/references/visualization.md",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": "skills/agentassure-audit/references/visualization.md",
+      "sha256": "8d7a17b0cb4cfc7ef645190bd771e80a1b9abe0c5fbf187d6ea15a4d1f2e26ef"
+    },
+    {
+      "id": "ev15",
+      "kind": "source",
+      "summary": "skills/agentassure-audit/scripts/advisories.py",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": "skills/agentassure-audit/scripts/advisories.py",
+      "sha256": "59c66ca2c76613f1a9ef4cac62a43c1a26495d0c9941663af7c6d3d2ea43c8b0"
+    },
+    {
+      "id": "ev16",
+      "kind": "source",
+      "summary": "skills/agentassure-audit/scripts/audit_records.py",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": "skills/agentassure-audit/scripts/audit_records.py",
+      "sha256": "96d2b45780242ccbb195524d500b49146039d2153bac539cc3d94ffa68e0658b"
+    },
+    {
+      "id": "ev17",
+      "kind": "source",
+      "summary": "skills/agentassure-audit/scripts/test_advisories.py",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": "skills/agentassure-audit/scripts/test_advisories.py",
+      "sha256": "0b3e7a00c5f2fc8f11a5a7322718a7620aff4d07578a70094bf5028fb7d344c9"
+    },
+    {
+      "id": "ev18",
+      "kind": "source",
+      "summary": "skills/agentassure-audit/scripts/test_audit_records.py",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:35:45.490274+00:00",
+      "path": "skills/agentassure-audit/scripts/test_audit_records.py",
+      "sha256": "ccf2034a0d8f0eb1bf94b4518e329abb357cd10b42c2d6dd0386438f89512d84"
+    },
+    {
+      "id": "osv0",
+      "kind": "advisory",
+      "summary": "No OSV match returned for actions/checkout at the pinned commit.",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:34:32.368804+00:00",
+      "url": "https://api.osv.dev/v1/query",
+      "source_status": "complete"
+    },
+    {
+      "id": "osv1",
+      "kind": "advisory",
+      "summary": "No OSV match returned for actions/setup-python at the pinned commit.",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "observed_at": "2026-11-05T18:34:32.886368+00:00",
+      "url": "https://api.osv.dev/v1/query",
+      "source_status": "complete"
+    }
+  ],
+  "coverage": [
+    {
+      "id": "unit-network",
+      "surface": "Advisory client",
+      "boundary": "Public metadata to remote API",
+      "attack_class": "Disclosure and redirects",
+      "state": "checked",
+      "evidence_refs": [
+        "ev15"
+      ]
+    },
+    {
+      "id": "unit-records",
+      "surface": "Record helper",
+      "boundary": "Source tree to evidence records",
+      "attack_class": "Path and state integrity",
+      "state": "candidate",
+      "evidence_refs": [
+        "ev16"
+      ]
+    },
+    {
+      "id": "unit-policy",
+      "surface": "Agent instructions",
+      "boundary": "Target text to tool authority",
+      "attack_class": "Prompt injection",
+      "state": "checked",
+      "evidence_refs": [
+        "ev6"
+      ]
+    },
+    {
+      "id": "unit-ci",
+      "surface": "GitHub Actions",
+      "boundary": "Pull request to CI runner",
+      "attack_class": "Workflow privileges",
+      "state": "checked",
+      "evidence_refs": [
+        "ev0"
+      ]
+    },
+    {
+      "id": "unit-deps",
+      "surface": "Dependencies",
+      "boundary": "Pinned action to advisory source",
+      "attack_class": "Known vulnerabilities",
+      "state": "checked",
+      "evidence_refs": [
+        "osv0",
+        "osv1"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "finding-proxy",
+      "claim": "Environment proxy settings bypass the empty ProxyHandler.",
+      "verdict": "rejected",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "hunter_id": "self-audit",
+      "verifier_id": "self-verify",
+      "reason": "Rejected by independent source review. The explicit ProxyHandler({}) replaces the default environment proxy handler. No proxy credentials are supplied.",
+      "evidence_refs": [
+        "ev15"
+      ],
+      "coverage_refs": [
+        "unit-network"
+      ],
+      "severity": null
+    },
+    {
+      "id": "finding-failed-query",
+      "claim": "A failed or skipped package query is reported as complete.",
+      "verdict": "rejected",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "hunter_id": "self-audit",
+      "verifier_id": "self-verify",
+      "reason": "Rejected by independent source review. Failed queries carry an error and set partial. Private or unknown packages also set partial. A successful empty OSV result means no source match, not safety.",
+      "evidence_refs": [
+        "ev15"
+      ],
+      "coverage_refs": [
+        "unit-network"
+      ],
+      "severity": null
+    },
+    {
+      "id": "finding-race",
+      "claim": "A concurrent source file swap may bypass path checks before source_hash opens the file.",
+      "verdict": "needs_validation",
+      "snapshot_id": "385c7126a196586968b6eb6dfae9c060317829fb0af632908cb7ebfa0bb514af",
+      "hunter_id": "coordinator",
+      "verifier_id": "self-verify",
+      "reason": "Path checks and file opening use separate operations. A practical attacker, race, and security effect were not demonstrated. The source tree must remain stable during evidence collection.",
+      "next_test": "Use an isolated synthetic tree to test a concurrent symlink swap. Check whether evidence can refer outside the target. Do not use host files.",
+      "evidence_refs": [
+        "ev16"
+      ],
+      "coverage_refs": [
+        "unit-records"
+      ],
+      "severity": null
+    }
+  ],
+  "prevention": [
+    {
+      "id": "control-source",
+      "status": "proposed",
+      "rule": "Evidence reads stay inside a stable source snapshot.",
+      "control": "Use an immutable source snapshot. Consider descriptor-relative no-follow reads if hostile concurrent writers must be supported.",
+      "regression_test": "Race a synthetic file swap in isolation and assert that outside-target data cannot become source evidence.",
+      "ci_check": "Add a bounded filesystem integrity test after reproduction.",
+      "retest_condition": "Retest a changed helper revision after the concurrency model is defined.",
+      "finding_refs": [
+        "finding-race"
+      ],
+      "coverage_refs": [
+        "unit-records"
+      ],
+      "evidence_refs": []
+    }
+  ],
+  "visual_elements": [
+    {
+      "id": "input",
+      "kind": "node",
+      "status": "observed",
+      "evidence_refs": [
+        "ev6"
+      ],
+      "finding_refs": [],
+      "prevention_refs": []
+    },
+    {
+      "id": "coordinator",
+      "kind": "node",
+      "status": "observed",
+      "evidence_refs": [
+        "ev6"
+      ],
+      "finding_refs": [],
+      "prevention_refs": []
+    },
+    {
+      "id": "records",
+      "kind": "node",
+      "status": "observed",
+      "evidence_refs": [
+        "ev16"
+      ],
+      "finding_refs": [
+        "finding-race"
+      ],
+      "prevention_refs": [
+        "control-source"
+      ]
+    },
+    {
+      "id": "lookup",
+      "kind": "node",
+      "status": "observed",
+      "evidence_refs": [
+        "ev15"
+      ],
+      "finding_refs": [],
+      "prevention_refs": []
+    },
+    {
+      "id": "services",
+      "kind": "node",
+      "status": "observed",
+      "evidence_refs": [
+        "ev15"
+      ],
+      "finding_refs": [],
+      "prevention_refs": []
+    },
+    {
+      "id": "report",
+      "kind": "node",
+      "status": "observed",
+      "evidence_refs": [
+        "ev6"
+      ],
+      "finding_refs": [],
+      "prevention_refs": []
+    },
+    {
+      "id": "scope",
+      "kind": "edge",
+      "status": "observed",
+      "evidence_refs": [
+        "ev6"
+      ],
+      "finding_refs": [],
+      "prevention_refs": []
+    },
+    {
+      "id": "save",
+      "kind": "edge",
+      "status": "observed",
+      "evidence_refs": [
+        "ev16"
+      ],
+      "finding_refs": [],
+      "prevention_refs": []
+    },
+    {
+      "id": "query",
+      "kind": "edge",
+      "status": "observed",
+      "evidence_refs": [
+        "ev15"
+      ],
+      "finding_refs": [],
+      "prevention_refs": []
+    },
+    {
+      "id": "api",
+      "kind": "edge",
+      "status": "observed",
+      "evidence_refs": [
+        "ev15"
+      ],
+      "finding_refs": [],
+      "prevention_refs": []
+    },
+    {
+      "id": "render",
+      "kind": "edge",
+      "status": "observed",
+      "evidence_refs": [
+        "ev16"
+      ],
+      "finding_refs": [],
+      "prevention_refs": []
+    }
+  ]
+}

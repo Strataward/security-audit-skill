@@ -1,0 +1,21 @@
+{
+  ".github/workflows/test.yml": "eee1a2f34a39da632c0faf89671ee87ce45c31b75d2efc53aced09a1c50734e3",
+  ".gitignore": "25b9cb0445c556ad35e92cae5d26dfa31e9b57687a17d4269091861d63c21816",
+  "CONTRIBUTING.md": "a7ad9ea44ff5ead99a15f38914def73d61957d4004aa1f23c3c616f633cac722",
+  "LICENSE": "0740bf99f174785e028303f9888232449e683927d9dfbdf83c84cf3c1490328c",
+  "README.md": "d15acc4eedcf7f21ec89eade51453ab9412e521ad8dd1106e83334a9c130346a",
+  "SECURITY.md": "51059b42b8929e143f7bb43f24fc201733df638120aa37f56ed2f447db13fa5a",
+  "skills/agentassure-audit/SKILL.md": "452489073369c001db94864d532d2633f80f4a64e3c3e01797fbe6c52dd7a80e",
+  "skills/agentassure-audit/agents/openai.yaml": "c0b54cd8e8b6eaf3ba9f009f0432f8621184dc0182d275ce32ae7de206bb4f89",
+  "skills/agentassure-audit/assets/audit-workflow.json": "e22dba824887230bcfc4ba38ce154baa8dda59b55441ca62fb3ffcc9a6025668",
+  "skills/agentassure-audit/references/advisories.md": "ad239e8d58cb13fc1c2c500da56e8e57da55915a54843136eb537e70f2e3e210",
+  "skills/agentassure-audit/references/audit.md": "08f8de8915707ded9487129367d4a0816c87418f2b886d80d649d03ee5c7ded1",
+  "skills/agentassure-audit/references/prevention.md": "80e7b8e84e75cad57cdc542e0afb40b41fd14e6eeaf81a7c2106c036d5521c88",
+  "skills/agentassure-audit/references/records.md": "1f98dde88ee8108465568aeeda65cb208754e6f96d32edd48d9dbbdcd7d91506",
+  "skills/agentassure-audit/references/sources.md": "147c98e56ff4e204920a5c45f24ebecb63b7062a0029526c8b4ddaf58cd3249d",
+  "skills/agentassure-audit/references/visualization.md": "8d7a17b0cb4cfc7ef645190bd771e80a1b9abe0c5fbf187d6ea15a4d1f2e26ef",
+  "skills/agentassure-audit/scripts/advisories.py": "59c66ca2c76613f1a9ef4cac62a43c1a26495d0c9941663af7c6d3d2ea43c8b0",
+  "skills/agentassure-audit/scripts/audit_records.py": "96d2b45780242ccbb195524d500b49146039d2153bac539cc3d94ffa68e0658b",
+  "skills/agentassure-audit/scripts/test_advisories.py": "0b3e7a00c5f2fc8f11a5a7322718a7620aff4d07578a70094bf5028fb7d344c9",
+  "skills/agentassure-audit/scripts/test_audit_records.py": "ccf2034a0d8f0eb1bf94b4518e329abb357cd10b42c2d6dd0386438f89512d84"
+}

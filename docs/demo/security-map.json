@@ -1,0 +1,131 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Security Audit Skill: Self-Audit",
+    "quality_profile": "showcase",
+    "animation": "none"
+  },
+  "lanes": [
+    {
+      "id": "local",
+      "label": "Trusted coordinator and retained output"
+    },
+    {
+      "id": "remote",
+      "label": "Public advisory requests"
+    }
+  ],
+  "mainPath": [
+    "input",
+    "coordinator",
+    "records",
+    "report"
+  ],
+  "nodes": [
+    {
+      "id": "input",
+      "lane": "local",
+      "col": 0,
+      "type": "external",
+      "label": "Audit inputs",
+      "sublabel": "Untrusted data",
+      "width": 170
+    },
+    {
+      "id": "coordinator",
+      "lane": "local",
+      "col": 1,
+      "type": "security",
+      "label": "Coordinator",
+      "sublabel": "Sets scope and authority",
+      "width": 170
+    },
+    {
+      "id": "records",
+      "lane": "local",
+      "col": 2,
+      "type": "database",
+      "label": "Evidence records",
+      "sublabel": "Parent owns writes",
+      "width": 170
+    },
+    {
+      "id": "lookup",
+      "lane": "remote",
+      "col": 1,
+      "type": "backend",
+      "label": "Advisory helper",
+      "sublabel": "Public metadata only",
+      "width": 170
+    },
+    {
+      "id": "services",
+      "lane": "remote",
+      "col": 2,
+      "type": "external",
+      "label": "OSV and KEV",
+      "sublabel": "External evidence",
+      "width": 170
+    },
+    {
+      "id": "report",
+      "lane": "local",
+      "col": 3,
+      "type": "frontend",
+      "label": "Report and map",
+      "sublabel": "Claims and gaps",
+      "width": 170
+    }
+  ],
+  "edges": [
+    {
+      "id": "scope",
+      "from": "input",
+      "to": "coordinator",
+      "label": "Read data"
+    },
+    {
+      "id": "save",
+      "from": "coordinator",
+      "to": "records",
+      "label": "Save evidence"
+    },
+    {
+      "id": "query",
+      "from": "coordinator",
+      "to": "lookup",
+      "label": "Public versions"
+    },
+    {
+      "id": "api",
+      "from": "lookup",
+      "to": "services",
+      "label": "HTTPS"
+    },
+    {
+      "id": "render",
+      "from": "records",
+      "to": "report",
+      "label": "Evidence IDs"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "amber",
+      "title": "Partial audit",
+      "items": [
+        "0 confirmed; 2 rejected; 1 needs validation.",
+        "No target execution or exploit reproduction ran."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Pinned evidence",
+      "items": [
+        "Source: c027478. Audit: 2026-11-05.",
+        "No OSV matches for two action commits. Runtime coverage remains incomplete."
+      ]
+    }
+  ]
+}

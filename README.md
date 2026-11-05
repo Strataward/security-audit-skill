@@ -26,6 +26,16 @@ flowchart LR
   F --> G[Visual map and prevention]
 ```
 
+## Self-audit demo
+
+I ran this skill against its own source at commit `c027478`. The bounded audit produced zero confirmed vulnerabilities, two rejected candidates, and one candidate that needs validation. It used source review and live OSV queries. No target execution or exploit reproduction ran.
+
+[Read the audit report](docs/demo/REPORT.md) for evidence, advisory coverage, proposed prevention, and limitations.
+
+[![Self-audit source map](docs/demo/security-map.png)](docs/demo/REPORT.md)
+
+The map shows documented paths, not an execution trace. Download [the interactive HTML](docs/demo/security-map.html) and open it locally. The demo includes machine-readable records and the exact source manifest.
+
 ## Install for your agent
 
 Use the [Skills CLI](https://github.com/vercel-labs/skills). It requires Node.js 22.20 or later. Run this command from your project and select your agents:

@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "component": "actions/checkout",
+      "commit": "11d5960a326750d5838078e36cf38b85af677262",
+      "retrieved_at": "2026-11-05T18:34:32.368804+00:00",
+      "source": "https://api.osv.dev/v1/query",
+      "response": {},
+      "status": "complete"
+    },
+    {
+      "component": "actions/setup-python",
+      "commit": "a26af69be951a213d495a4c3e4e4022e16d87065",
+      "retrieved_at": "2026-11-05T18:34:32.886368+00:00",
+      "source": "https://api.osv.dev/v1/query",
+      "response": {},
+      "status": "complete"
+    }
+  ],
+  "limitations": [
+    "Commit queries do not cover bundled dependencies or runtime images.",
+    "No exact deployed Python or runner version is pinned.",
+    "No third-party Python dependency is declared.",
+    "No CVE IDs were established for KEV enrichment."
+  ]
+}

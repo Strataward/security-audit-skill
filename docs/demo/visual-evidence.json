@@ -1,0 +1,116 @@
+[
+  {
+    "element_id": "input",
+    "kind": "node",
+    "status": "observed",
+    "evidence_refs": [
+      "ev6"
+    ],
+    "finding_refs": [],
+    "prevention_refs": []
+  },
+  {
+    "element_id": "coordinator",
+    "kind": "node",
+    "status": "observed",
+    "evidence_refs": [
+      "ev6"
+    ],
+    "finding_refs": [],
+    "prevention_refs": []
+  },
+  {
+    "element_id": "records",
+    "kind": "node",
+    "status": "observed",
+    "evidence_refs": [
+      "ev16"
+    ],
+    "finding_refs": [
+      "finding-race"
+    ],
+    "prevention_refs": [
+      "control-source"
+    ]
+  },
+  {
+    "element_id": "lookup",
+    "kind": "node",
+    "status": "observed",
+    "evidence_refs": [
+      "ev15"
+    ],
+    "finding_refs": [],
+    "prevention_refs": []
+  },
+  {
+    "element_id": "services",
+    "kind": "node",
+    "status": "observed",
+    "evidence_refs": [
+      "ev15"
+    ],
+    "finding_refs": [],
+    "prevention_refs": []
+  },
+  {
+    "element_id": "report",
+    "kind": "node",
+    "status": "observed",
+    "evidence_refs": [
+      "ev6"
+    ],
+    "finding_refs": [],
+    "prevention_refs": []
+  },
+  {
+    "element_id": "scope",
+    "kind": "edge",
+    "status": "observed",
+    "evidence_refs": [
+      "ev6"
+    ],
+    "finding_refs": [],
+    "prevention_refs": []
+  },
+  {
+    "element_id": "save",
+    "kind": "edge",
+    "status": "observed",
+    "evidence_refs": [
+      "ev16"
+    ],
+    "finding_refs": [],
+    "prevention_refs": []
+  },
+  {
+    "element_id": "query",
+    "kind": "edge",
+    "status": "observed",
+    "evidence_refs": [
+      "ev15"
+    ],
+    "finding_refs": [],
+    "prevention_refs": []
+  },
+  {
+    "element_id": "api",
+    "kind": "edge",
+    "status": "observed",
+    "evidence_refs": [
+      "ev15"
+    ],
+    "finding_refs": [],
+    "prevention_refs": []
+  },
+  {
+    "element_id": "render",
+    "kind": "edge",
+    "status": "observed",
+    "evidence_refs": [
+      "ev16"
+    ],
+    "finding_refs": [],
+    "prevention_refs": []
+  }
+]
